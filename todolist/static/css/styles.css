@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Varela+Round&display=swap');
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -6,11 +8,12 @@
 
 html {
     font-size: 100%;
+    
 }
 
 body {
     background: #b1f6cb;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Varela Round';
 }
 
 .container {
@@ -18,14 +21,15 @@ body {
     margin: 0 auto;
     background: #ffffff;
     padding: 20px 0;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
 }
 
 .row {
     display: block;
     padding: 10px;
     text-align: center;
-    width: 100%;
+    margin: auto;
+    width: 50%;
     clear: both;
     overflow: hidden;
 }
@@ -40,11 +44,12 @@ body {
 }
 
 h1 {
-    font-family: 'Rokkitt', sans-serif;
+    /* font-family: 'Rokkitt', sans-serif; */
     color: #666666;
     text-align: center;
     font-weight: 400;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 .tagline {
@@ -86,7 +91,7 @@ input[type='date'], input[type='text'], select {
     font-size: 13px;
     color: #777777;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-weight: 600;
     letter-spacing: 0.5px;
     -webkit-transition: background 0.3s;
@@ -148,9 +153,9 @@ input:focus::-moz-input-placeholder {
 }
 
 button {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     background: transparent;
-    border-radius: 2px;
+    border-radius: 5px;
     border: none;
     outline: none;
     height: 50px;
@@ -161,8 +166,8 @@ button {
     position: relative;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    padding-left: 30px;
-    padding-right: 15px;
+    /* padding-left: 30px;
+    padding-right: 15px; */
 }
 
 .icon {
@@ -174,7 +179,8 @@ button {
 
 .taskAdd {
     background: #444444;
-    padding-left: 31px;
+    /* padding-left: 31px; */
+    margin-bottom: 5px;
 }
 
 .taskAdd:hover {
@@ -183,7 +189,7 @@ button {
 
 .taskDelete {
     background: #e74c3c;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 
 .taskDelete:hover {
@@ -300,7 +306,7 @@ footer a {
 }
 
 .taskCheckbox:before, .taskCheckbox:checked:before {
-    font-family: 'FontAwesome';
+    /* font-family: 'FontAwesome'; */
     color: #444444;
     font-size: 20px;
     -webkit-transition: all 0.3s;
@@ -320,7 +326,7 @@ footer a {
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
-    padding-left: 16.5px;
+    padding-left: 20px;
     background: #ffffff;
 }
 
