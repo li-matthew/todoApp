@@ -67,11 +67,12 @@ h1 {
     border-top: 1px solid #e5e5e5;
     position: relative;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .inputContainer.last {
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .inputContainer.half.last.right {
@@ -102,7 +103,7 @@ input[type='date'] {
     cursor: pointer;
 }
 
-input[type='date'].focus, input[type='text']:focus, select:focus {
+input[type='date']:focus, input[type='text']:focus, select:focus {
     outline: none;
     background: #ecf0f1;
 }
@@ -180,7 +181,7 @@ button {
 .taskAdd {
     background: #444444;
     /* padding-left: 31px; */
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .taskAdd:hover {

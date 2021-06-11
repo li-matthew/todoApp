@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import TodoList, Category
+from django.contrib import messages
+from django.utils import timezone, dateformat
 
 # Create your views here.
 def index(request):
@@ -19,4 +21,4 @@ def index(request):
             for todoId in checkedList:
                 todo = TodoList.objects.get(id=int(todoId))
                 todo.delete()
-    return render(request, 'index.html', {'todos': todos, 'categories': categories})
+    return render(request, 'index.html', {'todos': todos, 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})
