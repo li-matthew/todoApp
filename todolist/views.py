@@ -17,8 +17,9 @@ def index(request):
             Todo.save()
             return redirect('/')
         if 'taskDelete' in request.POST:
-            checkedList = request.POST['checkedBox']
+            checkedList = request.POST.getlist('checkedBox')
             for todoId in checkedList:
+                print(todoId)
                 todo = TodoList.objects.get(id=int(todoId))
                 todo.delete()
     return render(request, 'index.html', {'todos': todos, 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})

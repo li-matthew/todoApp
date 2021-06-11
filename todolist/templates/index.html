@@ -20,7 +20,7 @@
                     {% csrf_token %}
                     <div class="inputContainer input-group">
                         <input type="text" class="taskName" placeholder="Task Name" aria-label="task"
-                            aria-describedby="basic-addon1">
+                            aria-describedby="basic-addon1" name='description'>
                     </div>
                     <div class="inputContainer half last input-group">
                         <select id='category' class="taskCategory" name='categorySelect' required>
@@ -54,7 +54,6 @@
                             </label>
                             <span class="category-{{ todo.category }}">{{ todo.category }}</span>
                             <strong class="taskDate">
-                                <i class="fa fa-calendar"></i>
                                 {{ todo.created }} - {{ todo.due_date }}
                             </strong>
                         </li>
