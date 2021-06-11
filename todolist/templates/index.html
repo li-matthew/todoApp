@@ -20,7 +20,7 @@
                     {% csrf_token %}
                     <div class="inputContainer input-group">
                         <input type="text" class="taskName" placeholder="Task Name" aria-label="task"
-                            aria-describedby="basic-addon1" name='description'>
+                            aria-describedby="basic-addon1" name='description' required>
                     </div>
                     <div class="inputContainer half last input-group">
                         <select id='category' class="taskCategory" name='categorySelect' required>
@@ -38,9 +38,11 @@
                         <button class='taskAdd' name='taskAdd' type='submit'>
                             Add Task
                         </button>
-                        <button class='taskDelete' name='taskDelete' formnovalidate='' type='submit'
-                            onclick="$('input#sublist').click();">
+                        <button class='taskDelete' name='taskDelete' formnovalidate='' type='submit'>
                             Delete Tasks
+                        </button>
+                        <button class='taskComplete' name='taskComplete' formnovalidate='' type='submit'>
+                            Mark Complete
                         </button>
                     </div>
 
@@ -50,7 +52,7 @@
                             <input type='checkbox' class='taskCheckbox' name='checkedBox' id="{{ todo.id }}"
                                 value="{{ todo.id }}">
                             <label for="{{ todo.id }}">
-                                <span class='complete-'>{{ todo.title }}</span>
+                                <span class='complete-{{todo.complete}}'>{{ todo.title }}</span>
                             </label>
                             <span class="category-{{ todo.category }}">{{ todo.category }}</span>
                             <strong class="taskDate">

@@ -13,13 +13,24 @@ def index(request):
             date = str(request.POST['date'])
             category = request.POST['categorySelect']
             content = title + ' -- ' + date + ' ' + category
-            Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
+            Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category), complete=False)
             Todo.save()
             return redirect('/')
         if 'taskDelete' in request.POST:
             checkedList = request.POST.getlist('checkedBox')
-            for todoId in checkedList:
-                print(todoId)
-                todo = TodoList.objects.get(id=int(todoId))
-                todo.delete()
-    return render(request, 'index.html', {'todos': todos, 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})
+            if len(checkedList) > 0:
+                for todoId in checkedList:
+                    print(todoId)
+                    todo = TodoList.objects.get(id=int(todoId))
+                    todo.delete()
+        if 'taskComplete' in request.POST:
+            checkedList = request.POST.getlist('checkedBox')
+            if len(checkedList) > 0:
+                for todoId in checkedList:
+                    print(todoId)
+                    todo = TodoList.objects.get(id=int(todoId))
+                    print(todo.title)
+                    todo.complete = True
+                    print(todo.complete)
+                    todo.save()
+    return render(request, 'index.html', {'todos': todos.order_by('complete'), 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})

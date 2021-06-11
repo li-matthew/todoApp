@@ -190,11 +190,21 @@ button {
 
 .taskDelete {
     background: #e74c3c;
+    margin-bottom: 10px;
     /* padding-left: 30px; */
 }
 
 .taskDelete:hover {
     background: #c0392b;
+}
+
+.taskComplete {
+    background: orange;
+    /* padding-left: 30px; */
+}
+
+.taskComplete:hover {
+    background: brown;
 }
 
 .taskList {
@@ -219,7 +229,7 @@ button {
     margin-right: 1em;
 }
 
-.complete-true {
+.complete-True {
     text-decoration: line-through;
     color: #bebebe;
 }
