@@ -20,17 +20,13 @@ def index(request):
             checkedList = request.POST.getlist('checkedBox')
             if len(checkedList) > 0:
                 for todoId in checkedList:
-                    print(todoId)
                     todo = TodoList.objects.get(id=int(todoId))
                     todo.delete()
         if 'taskComplete' in request.POST:
             checkedList = request.POST.getlist('checkedBox')
             if len(checkedList) > 0:
                 for todoId in checkedList:
-                    print(todoId)
                     todo = TodoList.objects.get(id=int(todoId))
-                    print(todo.title)
                     todo.complete = True
-                    print(todo.complete)
                     todo.save()
     return render(request, 'index.html', {'todos': todos.order_by('complete'), 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})

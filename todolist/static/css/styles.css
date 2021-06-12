@@ -179,33 +179,13 @@ button {
 }
 
 .taskAdd {
-    background: #444444;
-    /* padding-left: 31px; */
     margin-bottom: 10px;
-}
-
-.taskAdd:hover {
-    background: #303030;
 }
 
 .taskDelete {
-    background: #e74c3c;
     margin-bottom: 10px;
-    /* padding-left: 30px; */
 }
 
-.taskDelete:hover {
-    background: #c0392b;
-}
-
-.taskComplete {
-    background: orange;
-    /* padding-left: 30px; */
-}
-
-.taskComplete:hover {
-    background: brown;
-}
 
 .taskList {
     list-style: none;
