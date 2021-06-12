@@ -1,6 +1,7 @@
 # TO-DO APP
 
-A to-do list app made with Django, Python, and Bootstrap
+A to-do list app made with Django, Python, and Bootstrap.
+Tasks can be added with a description, category and due date. Once added, they can either be deleted or marked as complete.
 
 ## Screenshot
 ![Example](/todolist/media/screenshot.png)
