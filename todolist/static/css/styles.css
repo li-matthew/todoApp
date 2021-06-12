@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: #b1f6cb;
+    background: #77B28C;
     font-family: 'Varela Round';
 }
 
@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
     background: #ffffff;
     padding: 20px 0;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
 }
 
 .row {
@@ -76,7 +76,7 @@ h1 {
 }
 
 .inputContainer.half.last.right {
-    border-left: 1px solid #efefef;
+    border-left: 1px solid #e5e5e5;
 }
 
 input[type='date'], input[type='text'], select {
@@ -171,13 +171,6 @@ button {
     padding-right: 15px; */
 }
 
-.icon {
-    position: absolute;
-    top: 30%;
-    left: 10px;
-    font-size: 20px;
-}
-
 .taskAdd {
     margin-bottom: 10px;
 }
@@ -222,11 +215,11 @@ button {
     display: block;
     margin-left: 31px;
 }
-
+/* 
 .fa-calendar {
     margin-right: 10px;
     font-size: 16px;
-}
+} */
 
 [class*='category-'] {
     /* display: inline-block; */
@@ -250,23 +243,23 @@ button {
 }
 
 .category-Personal {
-    background: #2980b9;
+    background: #1306CC;
 }
 
 .category-Work {
-    background: #8e44ad;
+    background: #64357A;
 }
 
 .category-School {
-    background: #f39c12;
+    background: #39B0B3;
 }
 
 .category-Cleaning {
-    background: #16a085;
+    background: #444714;
 }
 
 .category-Other {
-    background: #d35400;
+    background: #B30805;
 }
 
 .footer {
