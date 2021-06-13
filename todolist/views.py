@@ -29,4 +29,4 @@ def index(request):
                     todo = TodoList.objects.get(id=int(todoId))
                     todo.complete = True
                     todo.save()
-    return render(request, 'index.html', {'todos': todos.order_by('complete'), 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})
+    return render(request, 'index.html', {'todos': todos.order_by('complete', 'due_date'), 'categories': categories, 'date': dateformat.format(timezone.now().date(), 'Y-m-d')})
